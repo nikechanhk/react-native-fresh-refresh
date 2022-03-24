@@ -57,7 +57,7 @@ const RefreshableWrapper: React.FC<Props> = ({
 
   const native = Gesture.Native();
 
-  const panGesture = Gesture.Pan()
+  const panGesture = Gesture.Pan().activeOffsetY([-10, 10])
     .onChange((event) => {
       'worklet';
       isLoaderActive.value = loaderOffsetY.value > 0;
